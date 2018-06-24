@@ -20,6 +20,6 @@ namespace FireWeb
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http:127.0.0.1:8080").Build();
+                .UseUrls("http://127.0.0.1:8080").Build();
     }
 }
