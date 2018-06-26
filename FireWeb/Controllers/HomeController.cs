@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FireWeb.Models;
+using FireWeb.Repository;
 
 namespace FireWeb.Controllers
 {
@@ -12,13 +13,14 @@ namespace FireWeb.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var testData = ProductRepository.GetUser();
+            return View(testData);
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
+            
             return View();
         }
 
