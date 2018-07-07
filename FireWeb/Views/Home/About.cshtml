@@ -5,3 +5,21 @@
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Form 範例 @ViewBag.name</h2>
+        <h1>@TempData["Work"] @ViewData["Where"]</h1>
+        <form method="post" name="form" action="About">
+            <p>
+                姓名:<input type="text" name="name" />
+            </p>
+            <p>
+                年齡:<input type="text" name="age" />
+            </p>
+            <p>
+                <input type="submit" />
+            </p>
+        </form>
+    </div>
+</div>
