@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+@{
+    Layout = "_Layout";
+}
+<html>
+<body>
+    <div>
+        <style>
+            .tableClass {
+                text-align: center;
+                width: auto;
+                height: 25vh;
+                background: #AA6125;
+                margin-top: 3%;
+            }
+
+                .tableClass td {
+                    border-radius: 50px;
+                    font-size: 20px;
+                }
+
+                .tableClass tr {
+                    border: 5px solid white;
+                    border-bottom-width: 10px;
+                }
+
+                .tableClass p {
+                    color: white;
+                    padding-bottom: 5px;
+                    padding-top: 5px;
+                    padding-right: 5px;
+                    padding-left: 5px;
+                }
+        </style>
+        <table class="tableClass" align="left">
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("RelatedLinks","News")'">相關連結</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("FireRegulations","News")'">消防法規</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("FireLegalInterpretation","News")'">消防署法令解釋</span></p>
+                </td>
+            </tr>
+        </table>
+
+        @RenderBody()
+
+    </div>
+
+</body>
+
+</html>

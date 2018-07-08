@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+@{
+    Layout = "_Layout";
+}
+<html>
+<body>
+    <div>
+        <style>
+            .tableClass {
+                text-align: center;
+                width: auto;
+                height: 58vh;
+                background: #AA6125;
+                margin-top: 3%;
+            }
+
+                .tableClass td {
+                    border-radius: 50px;
+                    font-size: 20px;
+                }
+
+                .tableClass tr {
+                    border: 5px solid white;
+                    border-bottom-width: 10px;
+                }
+
+                .tableClass p {
+                    color: white;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+        </style>
+        <table class="tableClass" align="left">
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("Public","Achievement")'">公家機關</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("Education","Achievement")'">教育機關</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("Medical","Achievement")'">醫療機構</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("Financial","Achievement")'">金融機關</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("Hotel","Achievement")'">飯店、旅館</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("Company","Achievement")'">公司、工廠</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("ClassA","Achievement")'">甲類場所</span></p>
+                </td>
+            </tr>
+        </table>
+
+        @RenderBody()
+
+    </div>
+
+</body>
+
+</html>
