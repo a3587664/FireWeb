@@ -15,16 +15,16 @@
     </environment>
     <div>
         <h4>
-            <img src="/images/HJLOGO.jpg" style="width: 5%;margin-left: 3%" />
-            <span style="margin-left: 4%">首頁</span>
-            <span style="margin-left: 4%">關於我們</span>
-            <span style="margin-left: 4%">商品介紹</span>
-            <span style="margin-left: 4%">消防檢修申報</span>
-            <span style="margin-left: 4%">工程實績</span>
-            <span style="margin-left: 4%">知識分享</span>
-            <span style="margin-left: 4%">最新消息</span>
-            <span style="margin-left: 4%">人才招募</span>
-            <span style="margin-left: 4%">聯絡我們</span>
+            <img  role="button" src="/images/HJLOGO.jpg" onclick="window.location.href='@Url.Action("index","home")'" style="width: 5%;margin-left: 3%" />
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">首頁</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">關於我們</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","product")'">商品介紹</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","report")'">消防檢修申報</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href = '@Url.Action("index","Achievement")'">工程實績</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">知識分享</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href = '@Url.Action("index","News")'">最新消息</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">人才招募</span>
+            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">聯絡我們</span>
         </h4>                         
     </div>
 </head>
