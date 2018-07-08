@@ -8,9 +8,35 @@ namespace FireWeb.Controllers
 {
     public class ReportController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
+
+        public ActionResult CheckWay()
+        {
+            return View();
+        }
+
+        public ActionResult DeadLine()
+        {
+            return View();
+        }
+
+        public ActionResult DrawWay()
+        {
+            return View();
+        }
+
+        public ActionResult Notice()
+        {
+            return View();
+        }
+
+        public ActionResult ProveDoc()
+        {
+            return View();
+        }
+
     }
 }
