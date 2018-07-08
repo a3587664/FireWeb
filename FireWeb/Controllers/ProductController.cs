@@ -14,5 +14,35 @@ namespace FireWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult FireBroadcast()
+        {
+            return View();
+        }
+
+        public ActionResult FireBox()
+        {
+            return View();
+        }
+
+        public ActionResult Refuge()
+        {
+            return View();
+        }
+
+        public ActionResult Smoke()
+        {
+            return View();
+        }
+
+        public ActionResult AutoWater()
+        {
+            return View();
+        }
+
+        public ActionResult Kitchen()
+        {
+            return View();
+        }
     }
 }
