@@ -18,8 +18,4 @@
     <None Include="wwwroot\images\Banner4.jpg" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-
 </Project>
