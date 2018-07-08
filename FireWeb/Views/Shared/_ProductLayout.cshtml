@@ -1,108 +1,69 @@
 ﻿<!DOCTYPE html>
+@{
+    Layout = "_Layout";
+}
 <html>
-<title>華紀工程股份有限公司</title>
-<head>
-
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
-    <div>
-        <h4>
-            <img src="/images/HJLOGO.jpg" style="width: 5%;margin-left: 3%" />
-            <span style="margin-left: 4%">首頁</span>
-            <span style="margin-left: 4%">關於我們</span>
-            <span style="margin-left: 4%">商品介紹</span>
-            <span style="margin-left: 4%">消防檢修申報</span>
-            <span style="margin-left: 4%">工程實績</span>
-            <span style="margin-left: 4%">知識分享</span>
-            <span style="margin-left: 4%">最新消息</span>
-            <span style="margin-left: 4%">人才招募</span>
-            <span style="margin-left: 4%">聯絡我們</span>
-        </h4>                         
-    </div>
-</head>
 <body>
 <div>
     <style>
         .tableClass {
             text-align: center;
             width: 11%;
-            height: 92vh;
-            background: black;
-            color: white;
+            height: 50vh;
+            background: #AA6125;
         }
 
-        .tableClass td {
-            font-size: 20px;
-        }
-        .tableClass tr {
-            margin-top: 5%;
-        }
+            .tableClass td {
+                border: 10px solid white;
+                
+                font-size: 20px;
+            }
+            .tableClass tr {
+                margin-top: 5%;
+            }
+            .tableClass p {
+                color: white;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-right: -10px;
+                padding-left: -10px;
+            }
     </style>
     <table class="tableClass">
         <tr>
-            <td>
-                火警廣播設備
+            <td >
+                <p>火警廣播設備</p>
             </td>
         </tr>
         <tr>
             <td>
-                消防箱主要配件
+                <p>消防箱主要配件</p>
+</td>
+        </tr>
+        <tr>
+            <td>
+                <p> 避難逃生設備</p>
             </td>
         </tr>
         <tr>
             <td>
-                避難逃生設備
-            </td>
+                <p>排煙設備</p>
+</td>
         </tr>
         <tr>
             <td>
-                排煙設備
-            </td>
+                <p>自動灑水滅火設備</p>
+</td>
         </tr>
         <tr>
             <td>
-                自動灑水滅火設備
-            </td>
-        </tr>
-        <tr>
-            <td>
-                廚房滅火設備
-            </td>
+                <p>廚房滅火設備</p>
+</td>
         </tr>
     </table>
 
     @RenderBody()
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
-    @RenderSection("Scripts", required: false)
 </div>
 
 </body>
