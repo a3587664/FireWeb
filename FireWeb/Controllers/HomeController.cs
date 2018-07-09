@@ -35,5 +35,11 @@ namespace FireWeb.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        //人才招募
+        public IActionResult Recruit()
+        {
+            return View();
+        }
     }
 }
