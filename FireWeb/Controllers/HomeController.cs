@@ -17,6 +17,10 @@ namespace FireWeb.Controllers
             return View(testData);
         }
 
+        public ActionResult Dafo()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -37,7 +41,7 @@ namespace FireWeb.Controllers
         }
 
         //人才招募
-        public IActionResult Recruit()
+        public ActionResult Recruit()
         {
             return View();
         }

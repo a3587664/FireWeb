@@ -1,0 +1,108 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<body>
+    <div style="font-size: 30px;height: 88vh;width: 100vw">
+        <style>
+            .tableClass {
+                text-align: center;
+                width: auto;
+                height: auto;
+                background: #AA6125;
+            }
+
+                .tableClass td {
+                    border-radius: 50px;
+                    font-size: 1.2vw;
+                }
+
+                .tableClass tr {
+                    border: 5px solid white;
+                    border-bottom-width: 4vh;
+                }
+
+                .tableClass p {
+                    color: white;
+                    padding-bottom: 5px;
+                    padding-top: 5px;
+                    padding-right: 5px;
+                    padding-left: 5px;
+                }
+        </style>
+        <div style="text-align:center;margin-right:10vw;font-size:2vw">
+            Dafo 巴士滅火設備
+        </div>
+        <span><img src="~/images/dafoImg.jpg" style="width:25vw;height:25vh; position:absolute;margin-top:53vh;margin-right:10vw" /></span>
+
+        <table class="tableClass" align="left">
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("RelatedLinks","News")'">Dafo巴士DM 簡易</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("FireRegulations","News")'">Dafo巴士DM</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action(" FireLegalInterpretation","News")'">SPRC 183證書</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action(" FireLegalInterpretation","News")'">車輛安全檢測基準</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span role="button" onclick="window.location.href = '@Url.Action("FireLegalInterpretation","News")'">水性藥劑<br />乾粉藥劑<br />比較表</span></p>
+                </td>
+            </tr>
+        </table>
+        <span style="position:absolute;margin-left:60vw;"><iframe style="height:18vh;width:22vw" src="https://www.youtube.com/embed/Js0mvqggrYA?ecver=2" style="position:absolute;left:0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span>
+        <div>
+            <img src="~/images/dafoLOGO.jpg" style="width:9vw;margin-left:66vw;margin-top:19.5vh;position:absolute" />
+            <p style="margin-left:78vw;margin-top:28vh;position:absolute;font-size:1.2vw">巴士自動滅火<br />&nbsp;&nbsp;&nbsp;(經銷商)</p>
+            <img src="~/images/Dafo_QR.jpg" style="width:7vw;margin-left:67vw;margin-top:35vh;position:absolute" />
+        </div>
+        <span style="position:absolute;margin-left:60vw;margin-top:55vh"><iframe style="height:18vh;width:22vw" src="https://www.youtube.com/embed/DiUjJVtcKZw?ecver=2" style="position:absolute;left:0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></span>
+        <div style="text-align:center;font-size:1.6vw;margin-right:20vw">
+            <span>
+                大多數巴士引起火災是從引擎室和周圍區域開饴起火。<br />
+                安装經過檢定且適當分類的車輛滅火系統，加上良好的<br />
+                火災偵測裝置，是發生緊急狀況時最佳的第一反應機制。<br />
+            </span>
+            <br />
+            車輛滅火系統在兩個情況下會啟動，在感應到煙霧的時<br />
+            候，或是起火因此需要防止火勢蔓延的時候，有良好的<br />
+            防火機制，就能有效降低損害的風險。即使巴士停放在<br />
+            車庫，車輛滅火系統依然有防火的作用。<br />
+            <br />
+            <span>
+                Dafo 是第一家通過巴士火災檢定的公司。很多領導業<br />
+                界的巴士製造商，在生産線上就安裝Dafo巴士系統。<br />
+                這些糸統經過調整，可以滿足製造商的各種需求，諸如<br />
+                快速安裝、簡易維護，並在嚴峻的情況下依然保證能發揮<br />
+                出強大的效能。<br />
+                <br />
+            </span>
+            <span style="margin-left:12%">
+                Dafo 總是按照新的法規提供認證過的車輛滅火系統。<br />
+            </span>
+            <span style="margin-left:12%">
+
+                我們有龐大的銷售網路，因此不管客戶在哪裡我們都<br />
+            </span>
+            <span style="margin-left:12%">
+
+                能確保提供頂級的服務和維修。<br />
+            </span>
+        </div>
+    </div>
+
+</body>
