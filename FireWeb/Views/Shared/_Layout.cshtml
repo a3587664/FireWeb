@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html  style="height:100%">
 <title>華紀工程股份有限公司</title>
 <head>
 
@@ -13,11 +13,14 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    <div>
-        <h4>
-            <img  role="button" src="/images/HJLOGO.jpg" onclick="window.location.href='@Url.Action("index","home")'" style="width: 5%;margin-left: 3%" />
-            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">首頁</span>
-            <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">關於我們</span>
+    <div style="white-space:nowrap;">
+        <span role="button" onclick="window.location.href='@Url.Action("index","home")'">
+            <img src="/images/HJLOGO.jpg" style="width: 7%" />
+            <span style="white-space:nowrap;"><img src="~/images/1531631575164.jpg" style="width:13%" /></span>
+        </span>
+
+        <span style="font-size:1vw">
+            <span role="button" style="margin-left: 2%" onclick="window.location.href='@Url.Action("index","home")'">關於我們</span>
             <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","product")'">商品介紹</span>
             <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","report")'">消防檢修申報</span>
             <span role="button" style="margin-left: 4%" onclick="window.location.href = '@Url.Action("index","Achievement")'">工程實績</span>
@@ -25,37 +28,47 @@
             <span role="button" style="margin-left: 4%" onclick="window.location.href = '@Url.Action("index","News")'">最新消息</span>
             <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">人才招募</span>
             <span role="button" style="margin-left: 4%" onclick="window.location.href='@Url.Action("index","home")'">聯絡我們</span>
-        </h4>                         
+        </span>
     </div>
 </head>
-<body>
-<div>
-    @RenderBody()
-    
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
+<body style="height:100%;overflow:auto;">
+    <div>
+        @RenderBody()
 
-    @RenderSection("Scripts", required: false)
-</div>
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
+
+        @RenderSection("Scripts", required: false)
+    </div>
+
+    <footer style="bottom:0px;white-space:nowrap;width:auto">
+        <p style="background-color:blue;height:3vh">
+            <span style="font-size:1.2vw;margin-left:15%;color:white">
+                <span>地址：29341 新北市鶯歌區欣欣街七棟1號</span>
+                <span style="margin-left:3%">email:yatai@@msahinet.net</span>
+                <span style="margin-left:3%">TEL：(02)8677-8441</span>
+                <span style="margin-left:3%">FAX：(02)8677-8440</span>
+            </span>
+        </p>
+    </footer>
 
 </body>
-
 </html>
