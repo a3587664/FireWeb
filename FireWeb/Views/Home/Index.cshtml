@@ -1,98 +1,124 @@
 ﻿<html>
 <body>
-<div style="height: 88vh;width: 100vw">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000" style="width: 80vw;margin-left: 10%">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="/images/Banner1.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="ASP.NET" class="img-responsive" />
-                <div class="carousel-caption" role="option">
+    <div style="height: 88vh;width: 100vw">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000" style="width: 80vw;margin-left: 10%">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="/images/Banner1.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="ASP.NET" class="img-responsive" />
+                    <div class="carousel-caption" role="option">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Banner2.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="Visual Studio" class="img-responsive" />
+                    <div class="carousel-caption" role="option">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Banner3.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="Package Management" class="img-responsive" />
+                    <div class="carousel-caption" role="option">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/images/Banner4.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="Microsoft Azure" class="img-responsive" />
+                    <div class="carousel-caption" role="option">
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <img src="/images/Banner2.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="Visual Studio" class="img-responsive" />
-                <div class="carousel-caption" role="option">
-                </div>
-            </div>
-            <div class="item">
-                <img src="/images/Banner3.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="Package Management" class="img-responsive" />
-                <div class="carousel-caption" role="option">
-                </div>
-            </div>
-            <div class="item">
-                <img src="/images/Banner4.jpg?@DateTime.Now" style="height: 40vh;width: 80vw" alt="Microsoft Azure" class="img-responsive" />
-                <div class="carousel-caption" role="option">
-                </div>
-            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
 
-    <div style="margin-left: 3%; margin-top: 2%; height: auto">
-        <table align=left style="margin-left: 8%">
-            <tr>
-                <td>
-                    <img src="/images/HJ_QR.jpg" style="width:100px">
-                </td>
-            </tr>
-            <tr>
-                <td>Line客服服務ID<br />XNS1817S</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>PC HOME連結</td>
-            </tr>
-        </table>
-        <table align="center" style="margin-left: 30%;width: auto">
-            <tr>
-                <td align="center" style="line-height:28px;width: 20%"><span style="font-size:1.4vw"><b>Dafo巴士滅火設備</b></span><br /><img src="/images/dafoLOGO.jpg" style="width:100px"><br />巴士自動滅火系統<br />(經 銷 商)<br /><img src="/images/Dafo_QR.jpg" style="width:100px"></td>
-                <td style="width: 5%">&nbsp;</td>
-                <td valign="top" style="line-height:28px;width: 20%"><font size="5"><span role="button"><b onclick="window.location.href='@Url.Action("index","product")'">商品介紹</b>    </span></font><font size="4"><br /><span role="button" onclick="window.location.href = '@Url.Action("FireBroadcast","Product")'">火警廣播設備</span><br /><span role="button" onclick="window.location.href = '@Url.Action("FireBox","Product")'">消防箱主要配件</span><br /><span role="button" onclick="window.location.href = '@Url.Action("Refuge","Product")'">避難逃生設備</span><br /><span role="button" onclick="window.location.href = '@Url.Action("Smoke","Product")'">排煙設備</span><br /><span role="button" onclick="window.location.href = '@Url.Action("AutoWater","Product")'">自動灑水滅火設備</span><br /><span role="button" onclick="window.location.href = '@Url.Action("Kitchen","Product")'">廚房滅火設備</span></td>
-                <td valign="top" style="line-height:28px;width: 20%"><font size="5"><span role="button"><b onclick="window.location.href='@Url.Action("index","report")'">消防檢修申報</b> </span></font><font size="4"><br /><span role="button" onclick="window.location.href='@Url.Action("CheckWay","report")'">檢修方式</span><br /><span role="button" onclick="window.location.href='@Url.Action("DrawWay","report")'">圖面繪製方式</span><br /><span role="button" onclick="window.location.href='@Url.Action("ProveDoc","report")'">應備證明文件</span><br /><span role="button" onclick="window.location.href='@Url.Action("DeadLine","report")'">檢修及申報期限</span><br /><span role="button" onclick="window.location.href='@Url.Action("Notice","report")'">注意事項</span><td/>
-                <td valign="top" style="line-height:28px;width: 20%"><font size="5"><span role="button"><b onclick="window.location.href='@Url.Action("index","Achievement")'">工程實績</b></span></font>
-                    <font size="4">
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("Public","Achievement")'">公家機關</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("Education","Achievement")'">教育機關</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("Medical","Achievement")'">醫療機關</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("Financial","Achievement")'">金融機關</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("Hotel","Achievement")'">飯店、旅館</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("Company","Achievement")'">公司、工廠</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("ClassA","Achievement")'">甲類場所</span>
-                    </font>
-                </td>
-                <td valign="top" style="line-height:28px;width: 20%"><font size="5"><span role="button"><b onclick="window.location.href='@Url.Action("index","news")'">最新消息</b>       </span></font>
-                    <font size="4">
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("RelatedLinks","News")'">相關連結</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("FireRegulations","News")'">消防法規</span>
-                        <br /><span role="button" onclick="window.location.href = '@Url.Action("FireLegalInterpretation","News")'">消防署法令解釋</span>
-                    </font>
-                </td>
-            </tr>
-        </table>
+        <div style="margin-left: 3%; margin-top: 2%; height: auto">
+            <table align=left style="margin-left: 8%">
+                <tr>
+                    <td>
+                        <img src="/images/HJ_QR.jpg" style="width:10vw">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size:1vw">Line客服服務ID<br />XNS1817S</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>PC HOME連結</td>
+                </tr>
+            </table>
+            <table align="center" style="margin-left: 30%;width: auto">
+                <tr>
+                    <td align="center" style="line-height:28px;width: 20%">
+                        <span style="font-size:1.4vw"><b>Dafo巴士滅火設備</b></span>
+                        <br /><img src="/images/dafoLOGO.jpg" style="width:7vw">
+                        <br /><span style="font-size:1vw">巴士自動滅火系統</span><br /><span style="font-size:1vw">(經 銷 商)</span><br />
+                        <img src="/images/Dafo_QR.jpg" style="width:7vw">
+                    </td>
+                    <td style="width: 5%">&nbsp;</td>
+                    <td valign="top" style="line-height:28px;width: 20%">
+                        <span role="button" style="font-size:1.4vw"><b onclick="window.location.href='@Url.Action("index","product")'">商品介紹</b></span>
+                        <span style="font-size:1.1vw">
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("FireBroadcast","Product")'">火警廣播設備</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("FireBox","Product")'">消防箱主要配件</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Refuge","Product")'">避難逃生設備</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Smoke","Product")'">排煙設備</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("AutoWater","Product")'">自動灑水滅火設備</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Kitchen","Product")'">廚房滅火設備</span>
+                        </span>
+                    </td>
+                    <td valign="top" style="line-height:28px;width: 20%">
+                        <span role="button" style="font-size:1.4vw"><b onclick="window.location.href='@Url.Action("index","report")'">消防檢修申報</b> </span>
+                        <span style="font-size:1.1vw">
+                            <br /><span role="button" onclick="window.location.href='@Url.Action("CheckWay","report")'">檢修方式</span>
+                            <br /><span role="button" onclick="window.location.href='@Url.Action("DrawWay","report")'">圖面繪製方式</span>
+                            <br /><span role="button" onclick="window.location.href='@Url.Action("ProveDoc","report")'">應備證明文件</span>
+                            <br /><span role="button" onclick="window.location.href='@Url.Action("DeadLine","report")'">檢修及申報期限</span>
+                            <br /><span role="button" onclick="window.location.href='@Url.Action("Notice","report")'">注意事項</span>
+                        </span>
+                    <td />
+                    <td valign="top" style="line-height:28px;width: 20%">
+                        <span role="button" style="font-size:1.4vw"><b onclick="window.location.href='@Url.Action("index","Achievement")'">工程實績</b></span>
+                        <span style="font-size:1.1vw">
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Public","Achievement")'">公家機關</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Education","Achievement")'">教育機關</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Medical","Achievement")'">醫療機關</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Financial","Achievement")'">金融機關</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Hotel","Achievement")'">飯店、旅館</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("Company","Achievement")'">公司、工廠</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("ClassA","Achievement")'">甲類場所</span>
+                        </span>
+                    </td>
+                    <td valign="top" style="line-height:28px;width: 20%">
+                        <span role="button" style="font-size:1.4vw"><b onclick="window.location.href='@Url.Action("index","news")'">最新消息</b>       </span>
+                        <span style="font-size:1.1vw">
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("RelatedLinks","News")'">相關連結</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("FireRegulations","News")'">消防法規</span>
+                            <br /><span role="button" onclick="window.location.href = '@Url.Action("FireLegalInterpretation","News")'">消防署法令解釋</span>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
-</div>
 </body>
 </html>
