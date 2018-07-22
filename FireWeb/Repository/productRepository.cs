@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
+using FireWeb.Models;
 using MySql.Data.MySqlClient;
 
 namespace FireWeb.Repository
@@ -11,9 +12,9 @@ namespace FireWeb.Repository
     {
         private static MySqlConnection _connect = new BaseConnection().cn;
 
-        public static IEnumerable<string> GetUser()
+        public static IEnumerable<Interview> GetInterviewInfo()
         {
-            return _connect.Query<string>("select distinct(user) from user");
+            return _connect.Query<Interview>("select * from Interview");
         }
     }
 }

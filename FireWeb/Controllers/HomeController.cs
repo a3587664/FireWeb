@@ -13,25 +13,16 @@ namespace FireWeb.Controllers
     {
         public IActionResult Index()
         {
-            var testData = ProductRepository.GetUser();
-            return View(testData);
+            return View();
         }
 
         public ActionResult Dafo()
         {
             return View();
         }
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-            
-            return View();
-        }
 
-        public IActionResult Contact()
+        public ActionResult AboutUs()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
@@ -43,7 +34,9 @@ namespace FireWeb.Controllers
         //人才招募
         public ActionResult Recruit()
         {
-            return View();
+            var model = ProductRepository.GetInterviewInfo();
+            
+            return View(model);
         }
     }
 }
