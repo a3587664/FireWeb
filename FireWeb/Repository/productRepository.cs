@@ -16,5 +16,11 @@ namespace FireWeb.Repository
         {
             return _connect.Query<Interview>("select * from Interview");
         }
+
+        internal static void UpdateInterviewInfo(Interview data)
+        {
+            var query = $"UPDATE Interview SET HeadCount={data.HeadCount}, Salary=\"{data.Salary}\", Education=\"{data.Education}\", Experience=\"{data.Experience}\", Remark=\"{data.Remark}\" WHERE Position=\"{data.Position}\"";
+            var a = _connect.Execute(query);
+        }
     }
 }

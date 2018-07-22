@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <table style="width:80vw" align="center">
+            <tr>
+                <td align="center">
+                    編輯
+                </td>
+                <td align="center">
+    職務名稱
+</td>
+                <td align="center">
+                    需求人數
+                </td>
+                <td align="center">
+                    學歷
+                </td>
+                <td align="center">
+                    經歷
+                </td>
+                <td align="center">
+                    待遇
+                </td>
+                <td align="center">
+                    備註
+                </td>
+            </tr>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    <button onclick="Edit(@item.Position)">編輯</button>
+                </td>
+                <td align="center">
+                    <span id="@item.Position"> @item.Position</span>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+HeadCountEdit" value="@item.HeadCount" hidden="hidden">
+
+                    <span id="@item.Position+HeadCount"> @item.HeadCount</span>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+EducationEdit" value="@item.Education" hidden="hidden">
+
+                    <span id="@item.Position+Education"> @item.Education</span>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+ExperienceEdit" value="@item.Experience" hidden="hidden">
+
+                    <span id="@item.Position+Experience"> @item.Experience</span>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+SalaryEdit" value="@item.Salary" hidden="hidden">
+
+                    <span id="@item.Position+Salary">@item.Salary</span>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+RemarkEdit" value="@item.Remark" hidden="hidden">
+
+                    <span id="@item.Position+Remark"> @item.Remark</span>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+E" value="@item.Position" hidden="hidden">
+
+                    <button onclick="Save(@item.Position)" id="@item.Position+Save" hidden="hidden">儲存</button>
+                </td>
+                <td align="center">
+                    <input id="@item.Position+E" value="@item.Position" hidden="hidden">
+
+                    <button onclick="Cancel(@item.Position)" id="@item.Position+Cancel" hidden="hidden">取消</button>
+                </td>
+            </tr>
+            }
+        </table>
+    </table>
+</body>
+</html>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js">
+    $(document).ready(function () {
+    });
+</script>
+
+<script>
+    function Edit(text) {
+        document.getElementById(text.id + '+HeadCountEdit').hidden = false;
+        document.getElementById(text.id + '+ExperienceEdit').hidden = false;
+        document.getElementById(text.id + '+SalaryEdit').hidden = false;
+        document.getElementById(text.id + '+RemarkEdit').hidden = false;
+        document.getElementById(text.id + '+EducationEdit').hidden = false;
+        document.getElementById(text.id + '+Save').hidden = false;
+        document.getElementById(text.id + '+Cancel').hidden = false;
+        document.getElementById(text.id + '+HeadCount').hidden = true;
+        document.getElementById(text.id + '+Experience').hidden = true;
+        document.getElementById(text.id + '+Salary').hidden = true;
+        document.getElementById(text.id + '+Remark').hidden = true;
+        document.getElementById(text.id +'+Education').hidden = true;
+    }
+    function Save(text) {
+        var headCount = document.getElementById(text.id + '+HeadCountEdit').value;
+        var experience = document.getElementById(text.id + '+ExperienceEdit').value;
+        var salary = document.getElementById(text.id + '+SalaryEdit').value;
+        var remark = document.getElementById(text.id + '+RemarkEdit').value;
+        var education = document.getElementById(text.id + '+EducationEdit').value;
+        var position = text.id;
+        $.ajax({
+            type: "POST",
+            url: "/BackEnd/Update",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                Position:position,
+                HeadCount: headCount,
+                Experience: experience,
+                Salary: salary,
+                Remark: remark,
+                Education: education
+            }),
+            success: function (response) {
+                alert("123");
+                window.location.reload();
+            },
+            failure: function (response) {
+                alert(response);
+            }
+        });
+    }
+    function Cancel(text) {
+        document.getElementById(text.id + '+HeadCountEdit').hidden = true;
+        document.getElementById(text.id + '+ExperienceEdit').hidden = true;
+        document.getElementById(text.id + '+SalaryEdit').hidden = true;
+        document.getElementById(text.id + '+RemarkEdit').hidden = true;
+        document.getElementById(text.id + '+EducationEdit').hidden = true;
+        document.getElementById(text.id + '+Save').hidden = true;
+        document.getElementById(text.id + '+Cancel').hidden = true;
+        document.getElementById(text.id + '+HeadCount').hidden = false;
+        document.getElementById(text.id + '+Experience').hidden = false;
+        document.getElementById(text.id + '+Salary').hidden = false;
+        document.getElementById(text.id + '+Remark').hidden = false;
+        document.getElementById(text.id + '+Education').hidden = false;
+    }
+</script>
