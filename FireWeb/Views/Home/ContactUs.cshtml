@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+    <div style="height:83vh">
+        <div style="position:absolute;margin-left:50vw">
+            <div style="font-size:1.3vw;margin-bottom:2vh;margin-left:13vw">我們在這裡！！</div>
+            <span >
+                <iframe style="width:36vw;height:48vh" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d452.0847975281734!2d121.33518773521747!3d24.97705485840965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681e9447e0ad59%3A0x26de80f5ca0dd60b!2zMjM55paw5YyX5biC6bav5q2M5Y2A5qyj5qyj6KGXN-iZn-ajnzHomZ8!5e0!3m2!1szh-TW!2stw!4v1533976869690" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </span>
+        </div>
+        <div style="margin-top:5vh;margin-left:8vw;font-size:1.3vw">
+            <span >請您填寫以下資料,並按下「送出」按鈕,將有專人為您服務及回覆</span>
+            <table style="margin-top:2vh">
+                <tr>
+                    <td>
+                        <p>姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="40" id="name"/></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>公司名稱：<input input size="40" id="companyName"/></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>公司地址：<input input size="40" id="companyAddress"/></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>連絡電話：<input input size="40" id="phone"/></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>電子信箱：<input input size="40" id="mail"/></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>留言：</p><textarea style="width:36vw;height:20vh" id="remark"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button onclick="submit()">送出</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js">
+    $(document).ready(function () {
+    });
+</script>
+<script>
+    function submit() {
+        var name = document.getElementById('name').value;
+        var mail = document.getElementById('mail').value;
+        var companyAddress = document.getElementById('companyAddress').value;
+        var companyName = document.getElementById('companyName').value;
+        var remark = document.getElementById('remark').value;
+        var phone = document.getElementById('phone').value;
+
+        $.ajax({
+            type: "POST",
+            url: "/Home/ContactInfo",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                Name: name,
+                CompanyName: companyName,
+                CompanyAddress: companyAddress,
+                Mail: mail,
+                Remark: remark,
+                Phone:phone
+            }),
+            success: function (response) {
+                alert("123");
+                window.location.reload();
+            },
+            failure: function (response) {
+                alert(response);
+            }
+        });
+    }
+</script>

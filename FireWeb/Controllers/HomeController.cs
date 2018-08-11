@@ -40,12 +40,23 @@ namespace FireWeb.Controllers
             return View(model);
         }
         
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
         public ActionResult DownloadFile(string fileName)
         {
             string filepath = $"Files/{fileName}";
             string filename = Path.GetFileName(filepath);
             Stream iStream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read);
             return File(iStream, "application/unknown", filename);
+        }
+
+        public ActionResult ContactInfo([FromBody]ContactInfo info)
+        {
+            ProductRepository.InsertContactInfo(info);
+            return Content("Success");
         }
     }
 }

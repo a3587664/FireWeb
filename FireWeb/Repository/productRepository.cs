@@ -22,5 +22,11 @@ namespace FireWeb.Repository
             var query = $"UPDATE Interview SET HeadCount={data.HeadCount}, Salary=\"{data.Salary}\", Education=\"{data.Education}\", Experience=\"{data.Experience}\", Remark=\"{data.Remark}\" WHERE Position=\"{data.Position}\"";
            _connect.Execute(query);
         }
+
+        internal static void InsertContactInfo(ContactInfo info)
+        {
+            var query = $"Insert into ContactInfo (Name,CompanyName,CompanyAddress,Mail,Phone,Remark) VALUES ('{info.Name}','{info.CompanyName}','{info.CompanyAddress}','{info.Mail}','{info.Phone}','{info.Remark}')";
+            _connect.Execute(query);
+        }
     }
 }
