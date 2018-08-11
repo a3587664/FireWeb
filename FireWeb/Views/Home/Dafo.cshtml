@@ -39,28 +39,28 @@
 
         <table class="tableClass" align="left">
             <tr>
-                <td>
-                    <p><span role="button">Dafo巴士DM 簡易</span></p>
+                <td role="button" onclick="download('dafoDMeasy.pdf')">
+                    <p>Dafo巴士DM 簡易</p>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <p><span role="button">Dafo巴士DM</span></p>
+                <td role="button" onclick="download('dafoDM.pdf')">
+                    <p>Dafo巴士DM</p>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <p><span role="button">SPRC 183證書</span></p>
+                <td role="button" onclick="download('SPRC183.pdf')">
+                    <p>SPRC 183證書</p>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <p><span role="button">車輛安全檢測基準</span></p>
+                <td role="button" onclick="download('safeRule.pdf')">
+                    <p>車輛安全檢測基準</p>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <p><span role="button">水性藥劑<br />乾粉藥劑<br />比較表</span></p>
+                <td role="button" onclick="download('preferTable.jpg')">
+                    <p>水性藥劑<br/>乾粉藥劑比較表</p>
                 </td>
             </tr>
         </table>
@@ -108,3 +108,13 @@
     </div>
 
 </body>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js">
+    $(document).ready(function () {
+    });
+</script>
+
+<script>
+    function download(value) {
+        window.location.href = '/Home/DownloadFile?fileName=' + value;
+    }
+</script>

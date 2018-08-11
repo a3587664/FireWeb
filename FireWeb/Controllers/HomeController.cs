@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FireWeb.Models;
 using FireWeb.Repository;
+using System.IO;
 
 namespace FireWeb.Controllers
 {
@@ -38,5 +39,15 @@ namespace FireWeb.Controllers
             
             return View(model);
         }
+        
+        public ActionResult DownloadFile(string fileName)
+        {
+            string filepath = $"Files/{fileName}";
+            string filename = Path.GetFileName(filepath);
+            Stream iStream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read);
+            return File(iStream, "application/unknown", filename);
+        }
     }
 }
+
+

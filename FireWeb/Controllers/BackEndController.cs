@@ -16,6 +16,8 @@ namespace FireWeb.Controllers
         [HttpPost]
         public JsonResult Update([FromBody] Interview data)
         {
+
+
             ProductRepository.UpdateInterviewInfo(data);
 
             return Json("success");
