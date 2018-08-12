@@ -56,7 +56,7 @@ namespace FireWeb.Controllers
         public ActionResult ContactInfo([FromBody]ContactInfo info)
         {
             ProductRepository.InsertContactInfo(info);
-            return Content("Success");
+            return Json("Success");
         }
     }
 }

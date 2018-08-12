@@ -17,6 +17,18 @@ namespace FireWeb.Repository
             return _connect.Query<Interview>("select * from Interview");
         }
 
+        internal static IEnumerable<ContactInfo> GetContactInfo()
+        {
+            var query = "select * from ContactInfo";
+            return _connect.Query<ContactInfo>(query);
+        }
+
+        internal static void DeleteContactInfo(string name)
+        {
+            var query = $"delete from ContactInfo where Name = \"{name}\"";
+            _connect.Execute(query);
+        }
+
         internal static void UpdateInterviewInfo(Interview data)
         {
             var query = $"UPDATE Interview SET HeadCount={data.HeadCount}, Salary=\"{data.Salary}\", Education=\"{data.Education}\", Experience=\"{data.Experience}\", Remark=\"{data.Remark}\" WHERE Position=\"{data.Position}\"";

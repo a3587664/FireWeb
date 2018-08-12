@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td style="padding-left:15px">姓名：@item.Name</td>
+            <td style="padding-left:15px">公司名稱：@item.CompanyName</td>
+            <td style="padding-left:15px">公司地址：@item.CompanyAddress</td>
+            <td style="padding-left:15px">電子信箱：@item.Mail</td>
+            <td style="padding-left:15px">連絡電話：@item.Phone</td>
+            <td style="padding-left:15px">留言：@item.Remark</td>
+            <td><button onclick="deleteInfo(@item.Name)">刪除</button></td>
+        </tr>
+        }
+    </table>
+</body>
+</html>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js">
+    $(document).ready(function () {
+    });
+</script>
+
+<script>
+    function deleteInfo(text) {
+        window.location.href = '/Backend/DeleteContactInfo?name=' + text;
+    }
+    function Save(text) {
+        var headCount = document.getElementById(text.id + '+HeadCountEdit').value;
+        var experience = document.getElementById(text.id + '+ExperienceEdit').value;
+        var salary = document.getElementById(text.id + '+SalaryEdit').value;
+        var remark = document.getElementById(text.id + '+RemarkEdit').value;
+        var education = document.getElementById(text.id + '+EducationEdit').value;
+        var position = text.id;
+        $.ajax({
+            type: "POST",
+            url: "/BackEnd/Update",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                Position:position,
+                HeadCount: headCount,
+                Experience: experience,
+                Salary: salary,
+                Remark: remark,
+                Education: education
+            }),
+            success: function (response) {
+                alert("123");
+                window.location.reload();
+            },
+            failure: function (response) {
+                alert(response);
+            }
+        });
+    }
+    function Cancel(text) {
+        document.getElementById(text.id + '+HeadCountEdit').hidden = true;
+        document.getElementById(text.id + '+ExperienceEdit').hidden = true;
+        document.getElementById(text.id + '+SalaryEdit').hidden = true;
+        document.getElementById(text.id + '+RemarkEdit').hidden = true;
+        document.getElementById(text.id + '+EducationEdit').hidden = true;
+        document.getElementById(text.id + '+Save').hidden = true;
+        document.getElementById(text.id + '+Cancel').hidden = true;
+        document.getElementById(text.id + '+HeadCount').hidden = false;
+        document.getElementById(text.id + '+Experience').hidden = false;
+        document.getElementById(text.id + '+Salary').hidden = false;
+        document.getElementById(text.id + '+Remark').hidden = false;
+        document.getElementById(text.id + '+Education').hidden = false;
+    }
+</script>
