@@ -29,6 +29,18 @@ namespace FireWeb.Repository
             _connect.Execute(query);
         }
 
+        internal static void DeleteInterviewInfo(string name)
+        {
+            var query = $"delete from Interview where Position = \"{name}\"";
+            _connect.Execute(query);
+        }
+
+        internal static void AddInterviewInfo(Interview data)
+        {
+            var query = $"Insert into Interview (HeadCount,Salary,Education,Experience,Position,Remark) VALUES ('{data.HeadCount}','{data.Salary}','{data.Education}','{data.Experience}','{data.Position}','{data.Remark}')";
+            _connect.Execute(query);
+        }
+
         internal static void UpdateInterviewInfo(Interview data)
         {
             var query = $"UPDATE Interview SET HeadCount={data.HeadCount}, Salary=\"{data.Salary}\", Education=\"{data.Education}\", Experience=\"{data.Experience}\", Remark=\"{data.Remark}\" WHERE Position=\"{data.Position}\"";

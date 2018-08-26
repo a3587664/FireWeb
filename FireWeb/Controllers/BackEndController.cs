@@ -18,11 +18,26 @@ namespace FireWeb.Controllers
             var model = ProductRepository.GetContactInfo();
             return View(model);
         }
-        
+
         public ActionResult DeleteContactInfo(string name)
         {
             ProductRepository.DeleteContactInfo(name);
             return RedirectToAction("ContactInfo");
+        }
+
+        public ActionResult DeleteInterviewInfo(string name)
+        {
+            ProductRepository.DeleteInterviewInfo(name);
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpPost]
+        public ActionResult NewInterviewInfo([FromBody]Interview data)
+        {
+            ProductRepository.AddInterviewInfo(data);
+
+            return Json("success");
         }
 
         [HttpPost]
